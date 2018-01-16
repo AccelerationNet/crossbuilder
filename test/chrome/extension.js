@@ -53,7 +53,7 @@ describe('Chrome extension', function () {
     it('should open Github', function (done) {
       this.driver.get('https://github.com').then(() => {
         this.driver.getTitle().then((title) => {
-          expect(title).toEqual('How people build software · GitHub');
+          expect(title).toContain('GitHub');
           done();
         });
       });
